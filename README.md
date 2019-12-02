@@ -11,12 +11,11 @@ This code was written for the Borland TurboC compiler. This can be run either on
 1. Edit build.bat to update the TCPATH variable to the location of your TurboC installation. The default is the 'TC' folder of the same drive.
 2. Edit the src/makefile to set the TCPATH variable to the location of your TurboC installation. The default is the 'TC' folder of the same drive.
 3. ***cd*** into the project folder
-4. Run build.bat
+4. Run ***build.bat***
 
 The resulting binary is placed in the projects 'dist' folder.
 
 ## Usage
-
 
 ### Running DOSPPT
 
@@ -26,7 +25,7 @@ On native DOS systems, you will need to load ANSI.SYS in with a line in your ***
 eg. 
 `device=c:\dos\ansi.sys`
 
-DOSBOX defaults to loading an ANSI driver. 
+DOSBox defaults to loading an ANSI driver.
 
 **Instructions**
 
@@ -50,12 +49,12 @@ All DOSPPT's behaviour is defined by its configuration file.  No other command l
 * *transition type* - a code from 00 to 99 indicating the type of transition should be made from the previous display to this one.
 * *delay* - the amount of time (in seconds) to sleep before starting to display the next line.
 
-example:
+**example:**
 
-~ <code>YOUTUBE.ANS 3 3
-B-O-V.ANS 3 3
-LIKE.ANS 3 3
-SUBSCR.ANS 3 3</code>
+    YOUTUBE.ANS 3 3
+    B-O-V.ANS 3 3
+    LIKE.ANS 3 3
+    SUBSCR.ANS 3 3
 
 You may have up to 100 slides.  
 
@@ -64,7 +63,6 @@ The file content is read once at program launch.  All entries are looped through
 #### Transition Codes ####
 
 * *3* - Vertical Top to Bottom Wipe
-* *DEFAULT* (any other value) - Vertical Bottom to Top Scroll
 
 ### Sample
 
