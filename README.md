@@ -2,7 +2,27 @@
 
 ## About
 
-This is a small project to provide a demoware platform for vintage computers.  It was created to be simple, small and portable. The first targets are DOS based computers -- hence the name.  And the first capability we've added is displaying ASCII files.  
+This is a small project to provide a demoware platform for vintage computers.  It was created to be simple, small and portable. The first targets are DOS based computers -- hence the name.  The first capability we've added is displaying ASCII files.  
+
+This application is written in simple C. It's intended to be transportable to multiple vintage computing platforms, but should be just as easily targetable for modern platforms.  A note of caution is the particular C-dialect we're using here would probabably give modern C programmers the screaming ab-dabs.
+
+## Alternatives
+
+Before writing this little app, we considered a number of alternatives. They are nicely encapsulated in this Stack Exchange article:
+[](https://unix.stackexchange.com/questions/131702/is-there-any-cli-terminal-slideshow-app/131729)
+
+Here's the list.  We've chosen to write something new since our initial target environment was vintage DOS.  None of these options appeared easily retargetable for that use case.
+However, they may work well for whatever you need!
+
+* **[patat](https://github.com/jaspervdj/patat)** (Presentations Atop The ANSI Terminal) is a small tool that allows you to show presentations using only an ANSI terminal. It does not require ncurses. It's written in HASKELL. It requires PANDOC library. Sounds great for LINUX and UNIX but not ideal for 16-64KB DOS or other vintage machine.
+* **[tpp](https://github.com/cbbrowne/tpp)**  Text Presentation Program is an ncurses-based presentation tool. Written in RUBY. Again, sounds great for LINUX and UNIX but not ideal for 16-64KB DOS or other vintage machine.
+* **[tkn](https://github.com/fxn/tkn)** Terminal Key Note - presents slides written in RUBY on a terminal. RUBY is not an ideal, or indeed, available language for vintage systems.
+* **[slider](https://github.com/dgoodlad/slider)** Ruby module for console application figlet. Creates and view a slideshow using only a terminal emulator. Same problem for us.
+* **[posero](https://github.com/alfredodeza/posero.vim)** VIM plugin for presenting. Sounds cool, but not for vintage DOS.
+* **[vimdeck](https://github.com/tybenz/vimdeck)** Same approach with the same drawbacks as Posero. Getting a fully featured VIM with plugins working in a small DOS machine sounds daunting.
+* **[mdp](https://github.com/visit1985/mdp)** Markdown documents paged as presentation pages through NCURSES.  We can imagine forking this to use PDCurses, a DOS capable CURSES implementation, but it doesn't really address the need for ASCII graphics, since it's MarkDown based. Neat though.
+* **[vtmc](https://github.com/jclulow/vtmc)** Video Terminal Master of Ceremonies -- completely text based input with ASCII and text output. Active show controls. Functionally almost spot on. Problem is it's written in JavaScript and runs on Node.js. Can't put that on a DOS PC.
+* **[tiptip](https://github.com/felixrabe-attic/mcrio--tiptip)** Terminal Plaintext Presentations. Text slideware, written in Coffee. It's the written in Coffee and configured in JSON part that's going to trip us up. Major porting required.
 
 ## Building from Source
 
